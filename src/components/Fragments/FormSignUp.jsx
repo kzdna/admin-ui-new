@@ -1,34 +1,17 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import LabeledInput from "../elements/LabeledInput";
-import CheckBox from "../elements/CheckBox";
+import CheckBox from "../elements/CheckBox"; // Tetap di-import, tapi elemennya dihapus
 import Button from "../elements/Button";
 
-function FormSignIn() {
-    const [formData, setFormData] = useState({
-        email: '',
-        password: '',
-        status: false, 
-    });
-
-    const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: type === 'checkbox' ? checked : value
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Data Login Dikirim:", formData);
-        };
-
+function FormSignUp() {
     return (
         <>
         {/* form start */}
         <div className="mt-16">
-          <form onSubmit={handleSubmit}>
+          <form action="">
+            {/* 💡 Opsional: Tambahkan field Nama jika diperlukan untuk Sign Up */}
+            {/* Anda bisa menambahkan LabeledInput di sini untuk 'Name' */}
+
             <div className="mb-6">
               <LabeledInput
                 label="Email Address"
@@ -36,8 +19,6 @@ function FormSignIn() {
                 type="email"
                 placeholder="hello@example.com"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
               />
             </div>
             <div className="mb-6">
@@ -47,31 +28,23 @@ function FormSignIn() {
                 type="password"
                 placeholder="********"
                 name="password"
-                value={formData.password}
-                onChange={handleChange}
                 />
             </div>
-            <div className="mb-3">
-                <CheckBox
-                label="Keep me signed in"
-                id="status"
-                type="checkbox"
-                name="status"
-                checked={formData.status}
-                onChange={handleChange}
-                />
-            </div>
-            {/* Tambahkan type="submit" */}
-            <Button type="submit">Login</Button>
+            
+            {/* ✅ Button tetap "Sign Up" */}
+            <Button>Sign Up</Button>
           </form>
         </div>
         {/* form end */}
+
         {/* teks start */}
         <div className="my-9 px-7 flex flex-col justify-center items-center text-xs text-gray-03">
           <div className="border border-gray-05 w-full"></div>
-          <div className="px-2 bg-special-mainBg absolute"> or sign in with</div>
+          {/* ✅ DIUBAH: or sign in with -> or sign up with */}
+          <div className="px-2 bg-special-mainBg absolute"> or sign up with</div> 
         </div>
         {/* teks end */}
+        
         {/* sign in with google start */}
         <div className="mb-8">
           <Button type="button" variant="secondary">
@@ -83,6 +56,7 @@ function FormSignIn() {
                 height="800"
                 viewBox="-0.5 0 48 48"
               >
+                {/* ... (Path SVG Google) ... */}
                 <path
                   d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
                   fill="#FBBC05"
@@ -105,15 +79,15 @@ function FormSignIn() {
           </Button>
         </div>
         {/* sign in with google end */}
+        
         {/* link start */}
         <div className="flex justify-center">
-          <Link to="/signup" className="text-primary text-sm font-bold">
-          Create an account
-          </Link>
-          </div>
+          {/* ✅ DIUBAH: Ganti link 'Create an account' menjadi 'Already have an account? Sign In' */}
+          <a className="text-primary text-sm font-bold">Already have an account? Sign In</a>
+        </div>
         {/* link end */}
         </>
     )
 }
 
-export default FormSignIn
+export default FormSignUp
