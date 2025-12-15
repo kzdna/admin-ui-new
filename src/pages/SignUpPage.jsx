@@ -3,7 +3,7 @@ import AuthLayout from "../components/Layout/AuthLayout";
 
 import FormSignUp from "../components/Fragments/FormSignUp"; 
 
-function signUpPage() { 
+function SignUpPage() { 
     return (
         <AuthLayout>
             <FormSignUp /> 
@@ -11,4 +11,4 @@ function signUpPage() {
     )
 }
 
-export default signUpPage;
+export default SignUpPage;
