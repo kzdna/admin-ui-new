@@ -1,5 +1,11 @@
 import MainLayout from "../components/Layout/MainLayout";
 import Card from "../components/elements/Card";
+import CardBalance from "../components/Fragments/CardBalance";
+import CardGoal from "../components/Fragments/CardGoal";
+import CardUpComingBill from "../components/Fragments/CardUpComingBill";
+import CardRecentTransaction from "../components/Fragments/CardUpComingBill";
+import CardStatic from "../components/Fragments/CardStatic";
+import CardExpenseBreakdown from "../components/Fragments/CardExpenseBreakdown"
 
 function dashboard() {
     return (
@@ -7,42 +13,22 @@ function dashboard() {
         <MainLayout>
         <div className="grid sm:grid-cols-12 sm:grid-rows-3 gap-6 h-full">
           <div className="sm:col-span-4">
-            <Card
-              title="Total Balance"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+            <CardBalance />
           </div>
           <div className="sm:col-span-4">
-            <Card
-              title="Goals"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+            <CardGoal/>
           </div>
           <div className="sm:col-span-4">
-            <Card
-              title="Upcoming Bill"
-              link="/bill"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+            <CardUpComingBill/>
           </div>
-          					<div className="sm:col-span-4 sm:row-span-2">
-            <Card
-              title="Recent Transactions"
-              link="/transactions"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+          <div className="sm:col-span-4 sm:row-span-2">
+            <CardRecentTransaction/>
           </div>
           <div className="sm:col-span-8">
-            <Card
-              title="Statistics"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+            <CardStatic/>
           </div>
           <div className="sm:col-span-8">
-            <Card
-              title="Expenses Breakdown"
-              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
-            />
+            <CardExpenseBreakdown/>
           </div>
         </div>
       </MainLayout>
