@@ -4,7 +4,7 @@ import Card from "../components/elements/Card";
 function dashboard() {
     return (
         <>
-        			<MainLayout>
+        <MainLayout>
         <div className="grid sm:grid-cols-12 sm:grid-rows-3 gap-6 h-full">
           <div className="sm:col-span-4">
             <Card
