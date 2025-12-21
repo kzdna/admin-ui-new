@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../elements/Card";
+import Card from "../Elements/Card";
 
 function CardStatic() {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
-import LabeledInput from "../elements/LabeledInput";
-import CheckBox from "../elements/CheckBox"; // Tetap di-import, tapi elemennya dihapus
-import Button from "../elements/Button";
+import LabeledInput from "../Elements/LabeledInput";
+import CheckBox from "../Elements/CheckBox"; // Tetap di-import, tapi elemennya dihapus
+import Button from "../Elements/Button";
 
 function FormSignUp() {
     return (

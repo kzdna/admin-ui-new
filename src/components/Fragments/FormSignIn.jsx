@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LabeledInput from "../elements/LabeledInput";
-import CheckBox from "../elements/CheckBox";
-import Button from "../elements/Button";
+import LabeledInput from "../Elements/LabeledInput";
+import CheckBox from "../Elements/CheckBox";
+import Button from "../Elements/Button";
 
 function FormSignIn() {
     const [formData, setFormData] = useState({

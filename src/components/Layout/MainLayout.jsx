@@ -1,8 +1,8 @@
 import React from "react"; 
-import Logo from "../elements/Logo";
-import Input from "../elements/Input";
+import Logo from "../Elements/Logo";
+import Input from "../Elements/Input";
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Icon from "../elements/Icon";
+import Icon from "../Elements/Icon";
 import { NavLink } from "react-router-dom";
 
 function MainLayout(props) {
