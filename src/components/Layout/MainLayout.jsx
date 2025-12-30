@@ -77,7 +77,6 @@ const { theme, setTheme } = useContext(ThemeContext);
                     <div className="ms-3 hidden sm:block">Logout</div>
                 </div>
                 </NavLink>
-			        <div>Logout</div>
                     <div className="border my-10 border-b-special-bg"></div>
 			        <div className="flex justify-between items-center">
                         <div>Avatar</div>
