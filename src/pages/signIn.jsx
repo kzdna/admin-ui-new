@@ -1,11 +1,11 @@
 import React from "react";
 import AuthLayout from "../components/Layout/AuthLayout";
-import FormSignIn from "../components/Fragments/FormSignIn";
+import FormsignIn from "../components/Fragments/FormSignIn";
 
 function signIn() {
     return (
         <AuthLayout>
-           <FormSignIn />
+           <FormsignIn />
         </AuthLayout>
     )
 }
