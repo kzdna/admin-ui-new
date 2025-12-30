@@ -1,9 +1,8 @@
 import React from "react";
 import AuthLayout from "../components/Layout/AuthLayout";
-
 import FormSignUp from "../components/Fragments/FormSignUp"; 
 
-function SignUpPage() { 
+function signUp() { 
     return (
         <AuthLayout>
             <FormSignUp /> 
@@ -11,4 +10,4 @@ function SignUpPage() {
     )
 }
 
-export default SignUpPage;
+export default signUp;
