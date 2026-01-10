@@ -21,7 +21,7 @@ function App() {
   };
 
   const NotRequireAuth = ({ children }) => {
-    return !user ? <Navigate to="/" /> : children;
+    return user ? <Navigate to="/" /> : children;
   };
 
   const myRouter = createBrowserRouter([
