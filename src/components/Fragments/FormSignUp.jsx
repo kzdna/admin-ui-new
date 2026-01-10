@@ -9,9 +9,6 @@ function FormSignUp() {
         {/* form start */}
         <div className="mt-16">
           <form action="">
-            {/* 💡 Opsional: Tambahkan field Nama jika diperlukan untuk Sign Up */}
-            {/* Anda bisa menambahkan LabeledInput di sini untuk 'Name' */}
-
             <div className="mb-6">
               <LabeledInput
                 label="Email Address"
