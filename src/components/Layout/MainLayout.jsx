@@ -5,6 +5,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Icon from "../Elements/Icon";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../context/themeContext";
+import { AuthContext } from "../../context/authContext";
 
 function MainLayout(props) {
   const { children } = props;
@@ -28,6 +29,21 @@ const { theme, setTheme } = useContext(ThemeContext);
     { id: 6, name: "Goals", icon: <Icon.Goal />, link: "/goal" },
     { id: 7, name: "Settings", icon: <Icon.Setting />, link: "/setting" },
   ];
+
+  const { user, logout } = useContext(AuthContext);
+  
+  const handleLogout = async () => {
+    try {
+      await logoutService();
+      logout(); 
+    } catch (err) {
+      console.error(err);
+      if (err.status === 401) {
+        logout();
+      }
+    }
+  };
+  
   
   return (
     <>

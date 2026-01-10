@@ -1,28 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import LabeledInput from "../Elements/LabeledInput";
 import CheckBox from "../Elements/CheckBox";
 import Button from "../Elements/Button";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function FormSignIn() {
-    const [formData, setFormData] = useState({
-        email: '',
-        password: '',
-        status: false, 
-    });
-
-    const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: type === 'checkbox' ? checked : value
-        }));
-    };
+function FormSignIn({ onSubmit }) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [keepSignedIn, setKeepSignedIn] = useState(false);
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Data Login Dikirim:", formData);
-        };
+      e.preventDefault();
+      onSubmit(email, password);
+    };
 
     return (
         <>
@@ -36,8 +27,8 @@ function FormSignIn() {
                 type="email"
                 placeholder="hello@example.com"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -47,8 +38,8 @@ function FormSignIn() {
                 type="password"
                 placeholder="********"
                 name="password"
-                value={formData.password}
-                onChange={handleChange}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 />
             </div>
             <div className="mb-3">
@@ -57,8 +48,8 @@ function FormSignIn() {
                 id="status"
                 type="checkbox"
                 name="status"
-                checked={formData.status}
-                onChange={handleChange}
+                checked={keepSignedIn}
+                onChange={(e) => setKeepSignedIn(e.target.checked)}
                 />
             </div>
             {/* Tambahkan type="submit" */}
@@ -116,4 +107,4 @@ function FormSignIn() {
     )
 }
 
-export default FormSignIn
+export default FormSignIn;
