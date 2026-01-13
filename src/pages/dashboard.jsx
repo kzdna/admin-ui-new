@@ -11,7 +11,7 @@ import {
   bills, 
   expensesBreakdowns, 
   balances,
-  goals, 
+  // goals,  <-- Ini dihapus karena sudah ada di useState bawah
   expensesStatistics 
 } from "../data";
 import { goalService } from "../services/dataService";
@@ -19,7 +19,7 @@ import { AuthContext } from "../context/authContext";
 import AppSnackbar from "../components/Elements/AppSnackbar";
 
 function dashboard() {
-  	const [goals, setGoals] = useState({});   
+    const [goals, setGoals] = useState({});   
     const { logout } = useContext(AuthContext);
 
     const [snackbar, setSnackbar] = useState({
@@ -53,8 +53,6 @@ function dashboard() {
     fetchGoals();
   }, []);
   
-  console.log(goals);
-  
     return (
         <>
         <MainLayout>
@@ -75,7 +73,7 @@ function dashboard() {
             <CardStatistic data={expensesStatistics}/>
           </div>
           <div className="sm:col-span-8">
-            <CardExpenseBreakdown data={expensesBreakdowns}/>
+            <CardExpenseBreakdown data={expensesBreakdowns[0]}/>
           </div>
         </div>
 

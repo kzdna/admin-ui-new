@@ -12,6 +12,7 @@ import {
 
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import ExpensesPage from "./pages/expenses";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -58,6 +59,15 @@ function App() {
         </RequireAuth>
       ),
     },
+
+    {
+      path: "/expenses",
+      element: (
+        <RequireAuth>
+          <ExpensesPage />
+        </RequireAuth>
+      ),
+    }
   ]);
 
   return (

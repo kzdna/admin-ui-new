@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Elements/Card";
 import DotsMobileStepper from "../Elements/DotsMobileStepper";
 import { Link } from "react-router-dom";
-import Icon from "../elements/Icon";
+import Icon from "../Elements/Icon";
 
 function CardBalance(props) {
   const { data } = props;
@@ -11,7 +11,7 @@ function CardBalance(props) {
     <>
       <Card
         title="Total Balance"
-        					desc={
+        	desc={
 					<DotsMobileStepper
 	          data={data.map((item) => (
 	            <div key={item.id} className="p-2">
