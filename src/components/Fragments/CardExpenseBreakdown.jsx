@@ -28,13 +28,13 @@ function CardExpenseBreakdown(props) {
                 </div>
               </div>
               <div className="text-right">
-                 <div className="flex items-center justify-end font-bold text-sm text-gray-800">
+                 <div className="flex items-center justify-end font-bold text-sm text-gray-500">
                     {data?.percentage}% 
                     <span className="ms-1">
                       {typeof data?.arrow === "object" ? data.arrow : (data?.arrow === 'up' ? '↑' : '↓')}
                     </span>
                  </div>
-                 <p className="text-gray-500 text-[10px]">Compare to last month</p>
+                 <p className="font-semibold text-gray-400 text-[13px]">Compare to last month</p>
               </div>
             </div>
           </div>
@@ -47,11 +47,11 @@ function CardExpenseBreakdown(props) {
                   className="flex justify-between items-center py-4 border-t-2 border-gray-200 first:border-t-0"
                 >
                   <div>
-                    <p className="font-semibold text-[14px] text-gray-02">{detail.name}</p>
+                    <p className="font-bold text-[13px] text-gray-02">{detail.name}</p>
                   </div>
                   <div className="text-right">
                     <p className="font-bold text-[14px] text-gray-02">${detail.amount}</p>
-                    <p className="text-gray-03 text-[11px] mt-1">{detail.date}</p>
+                    <p className="font-semibold text-gray-03 text-[11px] mt-1">{detail.date}</p>
                   </div>
                 </div>
               ))
