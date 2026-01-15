@@ -52,7 +52,7 @@ function ExpensesPage() {
       amount: "80",
       percentage: "15",
       arrow: <Icon.ArrowDown size={16} className="text-special-green" />,
-      icon: <Icon.Gamepad />, 
+      icon: <Icon.Movie />, 
       details: [
         { name: "Movie Ticket", date: "17 May 2023", amount: "15" },
         { name: "Video Game", date: "17 May 2023", amount: "65" }

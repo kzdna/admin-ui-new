@@ -63,17 +63,17 @@ export const expensesBreakdowns = [
     ),
   },
   {
-    id: 4,
-    category: "Entertainment",
-    amount: 80,
-    percentage: 15,
-    icon: <Icon.Gamepad />,
-    arrow: (
-      <div className="text-special-green">
-        <Icon.ArrowDown size={16} />
-      </div>
-    ),
-  },
+  id: 4,
+  category: "Entertainment",
+  amount: 80,
+  percentage: 15,
+  icon: <Icon.Movie />, 
+  arrow: (
+    <div className="text-special-green">
+      <Icon.ArrowDown size={16} />
+    </div>
+  ),
+},
   {
     id: 5,
     category: "Shopping",
